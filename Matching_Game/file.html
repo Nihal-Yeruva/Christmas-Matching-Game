@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+    <head>
+        <title>Match the Card</title>
+        <link rel = "stylesheet" href = "styles.css">
+        <script src = "script.js" async></script>
+    </head>
+    <body>
+        <h1 class = "page-title">Match the Card</h1> <!--title for css to call later-->
+        <div class = "overlay-text visible">
+            Click to Start
+        </div>
+        <div id = "game-over-text" class = "overlay-text">
+            GAME OVER
+            <span class = "overlay-text-small">
+                Click to Restart
+            </span>
+        </div>
+        <div id = "victory-text" class = "overlay-text">
+            YOU WIN!
+            <span class = "overlay-text-small">
+                Click to Restart
+            </span>
+        </div>
+        <div class = 'game-container'> <!--contains time, flips, and cards-->
+            <div class = "game-info-container"> <!--will contain the time and flips-->
+                <div class = "game-info"> <!--contains time info-->
+                    Time <span id="time-remaining">100</span> <!--how much time is left in secs-->
+                </div>
+                <div class = "game-info"> <!--contains flip info-->
+                    Flips <span id="flips">0</span> <!--how many flips made-->
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/tree.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/tree.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/present.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/present.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/santa.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/santa.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/mistletoe.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/mistletoe.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/cane.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/cane.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/reindeer.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/reindeer.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/man.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/man.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/wreath.png">
+                </div>
+            </div>
+            <div class = "card">
+                <div class = "card-back card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="star" src = "Assets/Images/star.png">
+                </div>
+                <div class = "card-front card-face">
+                    <img class ="snowflake snowflake-top-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-top-left" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-right" src = "Assets/Images/snowflake.png">
+                    <img class ="snowflake snowflake-bottom-left" src = "Assets/Images/snowflake.png">
+                    <img class ="card-value" src = "Assets/Images/wreath.png">
+                </div>  
+            </div>
+        </div>
+    </body>
+</html>
